@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>CSS Timing!</title>
+    <style>
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 20px;
+            animation: slide 5s infinite;
+        }
+
+        #circle1 {
+            animation-timing-function: ease-in-out;
+            background-color: #E84855;
+        }
+
+        #circle2 {
+            animation-timing-function: linear;
+            background-color: #0099FF;
+        }
+
+        #circle3 {
+            animation-timing-function: cubic-bezier(0, 1, .76, 1.14);
+            background-color: #FFCC00;
+        }
+
+        #circle4 {
+            animation-timing-function: ease;
+            background-color: #FFCCFF;
+        }
+
+        #circle5 {
+            animation-timing-function: ease-in;
+            background-color: #CC99FF;
+        }
+
+        #circle6 {
+            animation-timing-function: ease-out;
+            background-color: #FF99FF;
+        }
+
+        #circle7 {
+            animation-timing-function: step-start;
+            background-color: #E84877;
+        }
+
+        #circle8 {
+            animation-timing-function: step-end;
+            background-color: #E84899;
+        }
+
+        #container {
+            width: 550px;
+            background-color: #FFF;
+            border: 3px #CCC dashed;
+            border-radius: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 0 auto;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            25% {
+                transform: translate3d(380px, 0, 0);
+            }
+            50% {
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+            </style>
+</head>
+ 
+<body>
+<div id="container">
+    <div id="circle1" class="circle">ease-in-out</div>
+    <div id="circle2" class="circle">linear</div>
+    <div id="circle3" class="circle">cubic-bezier</div>
+    <div id="circle4" class="circle">ease</div>
+    <div id="circle5" class="circle">ease-in</div>
+    <div id="circle6" class="circle">ease-out</div>
+    <div id="circle7" class="circle">step-start</div>
+    <div id="circle8" class="circle">step-end</div>
+</div>
+</body>
+ 
+</html>
